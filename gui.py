@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-from  functionprintworld  import *
+from  scanner  import *
 root = Tk()
 frm = ttk.Frame(root, padding=30)
 frm.grid()
