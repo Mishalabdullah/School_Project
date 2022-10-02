@@ -4,7 +4,7 @@ from mysql.connector import *
 import time
 
 global valid_user
-valid_user = "http://tiny.cc/pgdn"
+valid_user = "http://de.qrwp.org/QR-Code"#http://tiny.cc/pgdn"
 l = []
 
 
@@ -49,7 +49,6 @@ def qrcodescanner():
 def attender():
 	attendence()
 	for i in l:
-		#print(i[1])
 		if i[1] == 0:
 			database = connect(host="localhost",user="root",passwd="root",database="project")
 			cursor = database.cursor()
