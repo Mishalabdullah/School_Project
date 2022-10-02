@@ -41,4 +41,3 @@ def qrcodescanner():
 				time.sleep(2)
 				camera = False
 				cv2.destroyAllWindows()
-payed_fees()
