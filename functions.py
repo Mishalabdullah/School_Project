@@ -6,10 +6,7 @@ import time
 global valid_user
 valid_user = "http://tiny.cc/pgdn"
 l = []
-day_num = 1
-def database_basic():
-	database = connect(host="localhost",user="root",passwd="root",database="project")
-	cursor = database.cursor()
+
 
 def attendence():
 	database = connect(host="localhost",user="root",passwd="root",database="project")
@@ -45,11 +42,12 @@ def qrcodescanner():
 				time.sleep(2)
 				camera = False
 				cv2.destroyAllWindows()
+				attender()
 
 
 
 def attender():
-	
+	attendence()
 	for i in l:
 		#print(i[1])
 		if i[1] == 0:
@@ -58,5 +56,3 @@ def attender():
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			break
-attendence()
-attender()
