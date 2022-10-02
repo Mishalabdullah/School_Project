@@ -7,19 +7,20 @@ global valid_user
 valid_user = "http://tiny.cc/pgdn"
   
 def attendence():
-	database = connect(host="localhost",user="root",passwd="root",database="school")
+	database = connect(host="localhost",user="root",passwd="root",database="project")
 	cursor = database.cursor() 
-	'''cursor.execute("update attendence set Attendence=1")
+	cursor.execute("update attendence set Attendence=1")
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		print(i)
-		# changing the code from here not resemble my own local database'''
-				
+	database.commit()
+			
 
 def payed_fees():
-	database = connect(host="localhost",user="root",passwd="root",database="EXAM")
+	database = connect(host="localhost",user="root",passwd="root",database="project")
 	cursor = database.cursor()	
-	cursor.execute("update attendence set Attendence=0 where Day=0;")
+	cursor.execute("update attendence set attendence=0")
+	database.commit()
 	
 		
 
@@ -40,4 +41,4 @@ def qrcodescanner():
 				time.sleep(2)
 				camera = False
 				cv2.destroyAllWindows()
-attendence()
+payed_fees()
