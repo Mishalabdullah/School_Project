@@ -46,6 +46,7 @@ def qrcodescanner():
 
 
 
+
 def attender():
 	attendence()
 	for i in l:
@@ -55,3 +56,4 @@ def attender():
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			break
+
