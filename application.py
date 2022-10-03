@@ -39,24 +39,69 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
         if i[0] == 6:
             if i[1] ==1:
                 canvas6 = Canvas(frm)
-                canvas6.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas6.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas6.grid(column=3,row=5,pady=5)
         if i[0] == 7:
             if i[1] ==1:        
                 canvas7 = Canvas(frm)
-                canvas7.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas7.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas7.grid(column=1,row=6,pady=5)
         if i[0] == 8:
             if i[1] ==1:
                 canvas8 = Canvas(frm)
-                canvas8.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas8.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas8.grid(column=2,row=6,pady=5)
 
         if i[0] == 9:
             if i[1] ==1:
                 canvas9 = Canvas(frm)
-                canvas9.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas9.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas9.grid(column=3,row=6,pady=5)
+        if i[0] == 10:
+            if i[1] ==1:
+                canvas10 = Canvas(frm)
+                canvas10.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas10.grid(column=1,row=7,pady=5)
+        if i[0] == 11:
+            if i[1] ==1:
+                canvas11 = Canvas(frm)
+                canvas11.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas11.grid(column=2,row=7,pady=5)
+        if i[0] == 12:
+            if i[1] ==1:
+                canvas12 = Canvas(frm)
+                canvas12.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas12.grid(column=3,row=7,pady=5)
+        if i[0] == 13:
+            if i[1] ==1:
+                canvas13 = Canvas(frm)
+                canvas13.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas13.grid(column=1,row=8,pady=5)
+        if i[0] == 14:
+            if i[1] ==1:
+                canvas14 = Canvas(frm)
+                canvas14.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas14.grid(column=2,row=8,pady=5)
+        if i[0] == 15:
+            if i[1] ==1:    
+                canvas15 = Canvas(frm)
+                canvas15.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas15.grid(column=3,row=8,pady=5)
+        if i[0] == 16:
+            if i[1] ==1:          
+                canvas16 = Canvas(frm)
+                canvas16.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas16.grid(column=1,row=9,pady=5)
+        if i[0] == 17:
+            if i[1] ==1:
+                canvas17 = Canvas(frm)
+                canvas17.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas17.grid(column=2,row=9,pady=5)
+        if i[0] == 18:
+            if i[1] ==1:
+                canvas18 = Canvas(frm)
+                canvas18.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas18.grid(column=3,row=9,pady=5)
 
 # the below code is for the boxes feel free to skip to the last part
 
