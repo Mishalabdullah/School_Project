@@ -1,0 +1,10 @@
+Note for Gauthem:-
+
+1. Work on the UI of the application (file name application.py). There are total of 18 boxes but only 9 are within the frame.
+Please make all the boxes inside the frame and arrange the button according to your wish.
+
+
+2. Create A Login Page and a database for the user creation.
+	- database name : project
+	- table name : users
+3. Create a design for the whole app and theme it.(Preferably use blue as a main colour.)
