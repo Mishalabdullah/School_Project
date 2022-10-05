@@ -7,35 +7,34 @@ root = Tk()
 frm = ttk.Frame(root, padding=0)
 frm.grid()
 def check_Tick(): # The Funciton is for changing the colour of the boxes
-    attendence()
-    print(l)
+    l = attendence()
     for i in l:
         print(i)
         if i[0] == 1:
             if i [1] == 1:
                 canvas = Canvas(frm)
                 canvas.create_rectangle(50, 50,10, 10, fill="#f50")
-                canvas.grid(column=1,row=4)
+                canvas.grid(column=1,row=2)
         if i[0] == 2:
             if i[1] == 1:
                 canvas2 = Canvas(frm)
                 canvas2.create_rectangle(50, 50,10, 10, fill="#f50")
-                canvas2.grid(column=2,row=4)
+                canvas2.grid(column=2,row=2)
         if i[0] == 3:
             if i [1] == 1:    
                 canvas3 = Canvas(frm)
                 canvas3.create_rectangle(50, 50,10, 10, fill="#f50")
-                canvas3.grid(column=3,row=4)
+                canvas3.grid(column=3,row=2)
         if i[0] == 4:
             if i[1] == 1:
                     canvas4 = Canvas(frm)
                     canvas4.create_rectangle(50, 50,10, 10, fill="#f50")
-                    canvas4.grid(column=1,row=5)
+                    canvas4.grid(column=1,row=3)
         if i[0] == 5:
             if i[1] ==1:
                 canvas5 = Canvas(frm)
                 canvas5.create_rectangle(50, 50,10, 10, fill="#f50")
-                canvas5.grid(column=2,row=5)
+                canvas5.grid(column=2,row=3)
         if i[0] == 6:
             if i[1] ==1:
                 canvas6 = Canvas(frm)
@@ -53,7 +52,6 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
                 canvas8.grid(column=2,row=6)
 
         if i[0] == 9:
-            if i[1] ==1:
                 canvas9 = Canvas(frm)
                 canvas9.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas9.grid(column=3,row=6)
@@ -162,12 +160,13 @@ canvas18.grid(column=3,row=7)
 
 ## The above part is just the code for the boxes 
 
-
+check_Tick()
 ttk.Label(frm, text="QR Code Scanner").grid(column=2, row=0)
-ttk.Button(frm, text="Scan Me", command=qrcodescanner).grid(column=1, row=1, pady=15)
+ttk.Button(frm, text="Scan Me", command=attender).grid(column=1, row=1, pady=15)
 ttk.Button(frm, text="reset", command=payed_fees).grid(column=2, row=1, pady=15)
 ttk.Button(frm, text="Quit", command=root.destroy).grid(column=3, row=1, pady=15)
 ttk.Button(frm, text="check", command=check_Tick).grid(column=4, row=1, pady=15)
 
 
 root.mainloop()
+

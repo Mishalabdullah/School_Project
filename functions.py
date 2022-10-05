@@ -5,23 +5,28 @@ import time
 
 global valid_user
 valid_user = "http://de.qrwp.org/QR-Code"#http://tiny.cc/pgdn"
-l = []
+
+
+m =[]
 
 
 def attendence():
+	l = []
 	database = connect(host="localhost",user="root",passwd="root",database="project")
 	cursor = database.cursor() 
-	#cursor.execute("update attendence set Attendence=1 where Day =" + str(day_num))
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		l.append(i)
+	return l 
 	database.commit()
-
+	
 def payed_fees():
+	qrcodescanner()
 	database = connect(host="localhost",user="root",passwd="root",database="project")
 	cursor = database.cursor()	
 	cursor.execute("update attendence set attendence=0")
 	database.commit()
+
 	
 		
 
@@ -42,18 +47,26 @@ def qrcodescanner():
 				time.sleep(2)
 				camera = False
 				cv2.destroyAllWindows()
-				attender()
 
 
 
 
 def attender():
-	attendence()
-	for i in l:
+	qrcodescanner()
+	database = connect(host="localhost",user="root",passwd="root",database="project")
+	cursor = database.cursor() 
+	cursor.execute("select * from attendence")
+	for i in cursor:
+		m.append(i)
+	database.commit()
+	for i in m:
 		if i[1] == 0:
 			database = connect(host="localhost",user="root",passwd="root",database="project")
 			cursor = database.cursor()
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
+			attendence()
+			print("attenderr",attendence())
 			break
 
+#attender()
