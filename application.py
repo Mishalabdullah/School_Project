@@ -169,4 +169,3 @@ ttk.Button(frm, text="check", command=check_Tick).grid(column=4, row=1, pady=15)
 
 
 root.mainloop()
-
