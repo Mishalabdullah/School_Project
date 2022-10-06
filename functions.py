@@ -53,8 +53,8 @@ def attender():
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		if i[1] == 0:
-			database = connect(host="localhost",user="root",passwd="root",database="project")
-			cursor = database.cursor()
+			#database = connect(host="localhost",user="root",passwd="root",database="project")
+			#cursor = database.cursor()
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			database.close()
