@@ -2,11 +2,15 @@ import cv2
 from pyzbar.pyzbar import decode
 from mysql.connector import *
 import time
+from tkinter import *
+from tkinter import ttk
+
 
 global valid_user
 valid_user = "http://de.qrwp.org/QR-Code"#http://tiny.cc/pgdn"
 
 m =[]
+
 
 def attendence():
 	l = []
@@ -53,10 +57,11 @@ def attender():
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		if i[1] == 0:
-			#database = connect(host="localhost",user="root",passwd="root",database="project")
-			#cursor = database.cursor()
+			database = connect(host="localhost",user="root",passwd="root",database="project")
+			cursor = database.cursor()
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			database.close()
+			check_Tick2()
 			print(attendence())
 
