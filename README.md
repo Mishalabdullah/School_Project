@@ -16,3 +16,5 @@ The following dependencies must be installed as well
 pip install opencv-python
 pip install zbarlight
 ```
+
+hello my name is gautham
