@@ -15,21 +15,37 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
                 canvas = Canvas(frm)
                 canvas.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas.grid(column=1,row=2)
+            else:
+                canvas = Canvas(frm)
+                canvas.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas.grid(column=1,row=2)
         if i[0] == 2:
             if i[1] == 1:
                 canvas2 = Canvas(frm)
                 canvas2.create_rectangle(50, 50,10, 10, fill="#f50")
+                canvas2.grid(column=2,row=2)
+            else:
+                canvas2 = Canvas(frm)
+                canvas2.create_rectangle(50, 50,10, 10, fill="#fb0")
                 canvas2.grid(column=2,row=2)
         if i[0] == 3:
             if i [1] == 1:    
                 canvas3 = Canvas(frm)
                 canvas3.create_rectangle(50, 50,10, 10, fill="#f50")
                 canvas3.grid(column=3,row=2)
+            else:
+                canvas3 = Canvas(frm)
+                canvas3.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas3.grid(column=3,row=2)
         if i[0] == 4:
             if i[1] == 1:
                     canvas4 = Canvas(frm)
                     canvas4.create_rectangle(50, 50,10, 10, fill="#f50")
                     canvas4.grid(column=1,row=3)
+            else:
+                canvas4 = Canvas(frm)
+                canvas4.create_rectangle(50, 50,10, 10, fill="#fb0")
+                canvas4.grid(column=1,row=3)
         if i[0] == 5:
             if i[1] ==1:
                 canvas5 = Canvas(frm)
