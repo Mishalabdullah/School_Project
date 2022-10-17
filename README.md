@@ -19,3 +19,5 @@ pip install pyzbar
 pip install opencv-python
 pip install zbarlight
 ```
+
+hello my name is gautham
