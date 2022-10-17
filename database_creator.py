@@ -7,9 +7,9 @@ except:
     database_passwd=input("Enter Your Passphrase For The Database:")
     database = connect(host="localhost",user=database_user,passwd=database_passwd)
     cursor = database.cursor()
-    #cursor.execute("create database project")
+    cursor.execute("create database project")
     cursor.execute("use project")
-    #cursor.execute("create table attendence (day int(31) primary key, attendence int(1))")
+    cursor.execute("create table attendence (day int(31) primary key, attendence int(1))")
     for i in range (1,19):
         cursor.execute("insert into attendence values("+ str(i) +",0)")
     database.commit()
