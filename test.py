@@ -8,10 +8,9 @@ def testcode():
                 canvas = Canvas(frm)
                 canvas.create_rectangle(50, 50,10, 10, fill="#fb0")
                 canvas.grid(column=1,row=2)
-def colour_box_changer(i):
+def colour_box_changer(n,c,r):
     canvas = Canvas(frm)
     canvas.create_rectangle(50, 50,10, 10, fill="#f50")
     canvas.grid(column=1,row=2)
 
-# Create two varaibles inside the function one for canvas,row and coloumn
-# implement the variables with format()
+colour_box_changer(1,2,3)
