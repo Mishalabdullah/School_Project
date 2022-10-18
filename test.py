@@ -1,3 +1,8 @@
+from tkinter import *
+from tkinter import ttk
+root = Tk()
+frm = ttk.Frame(root, padding=0)
+frm.grid()
 def testcode():
         if i[0] == 1:
             if i [1] == 1:
@@ -14,3 +19,5 @@ def colour_box_changer(n,c,r):
     canvas.grid(column=1,row=2)
 
 colour_box_changer(1,2,3)
+
+root.mainloop()
