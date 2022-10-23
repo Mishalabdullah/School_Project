@@ -1,5 +1,6 @@
 from tkinter import *
 from  functions  import *
+import tkinter.font as font
 
 
 root = Tk()
@@ -150,11 +151,11 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
  
 
 check_Tick()
-ttk.Label(frm, text="QR Code Scanner").grid(column=2, row=0)
-ttk.Button(frm, text="Scan Me", command=attender).grid(column=1, row=1, pady=15)
-ttk.Button(frm, text="reset", command=payed_fees).grid(column=2, row=1, pady=15)
-ttk.Button(frm, text="Quit", command=root.destroy).grid(column=3, row=1, pady=15)
-ttk.Button(frm, text="check", command=check_Tick).grid(column=4, row=1, pady=15)
+ttk.Label(frm, text="QR Code Scanner",font=("Helvetica", 24)).grid(column=2, row=0)
+ScanMeButton = Button(frm,text="Scan Me",font=('Helvetica',18),command=attender).grid(column=2, row=1, pady=15)
+ttk.Button(frm, text="reset", command=payed_fees).grid(column=3, row=8, pady=15)
+ttk.Button(frm, text="Quit", command=root.destroy).grid(column=2, row=8,padx=55)
+ttk.Button(frm, text="check", command=check_Tick).grid(column=1, row=8)
 
 
 root.mainloop()
