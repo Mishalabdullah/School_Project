@@ -11,7 +11,6 @@ valid_user = "http://de.qrwp.org/QR-Code"#http://tiny.cc/pgdn"
 
 m =[]
 
-
 def attendence():
 	l = []
 	database = connect(host="localhost",user="root",passwd="root",database="project")
@@ -20,6 +19,7 @@ def attendence():
 	for i in cursor:
 		l.append(i)
 	return l 
+
 	database.close()
 
 	
@@ -62,6 +62,5 @@ def attender():
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			database.close()
-			check_Tick2()
 			print(attendence())
 
