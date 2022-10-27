@@ -18,4 +18,5 @@ sudo apt-get install python3-tk
 pip install pyzbar
 pip install opencv-python
 pip install zbarlight
+
 ```
