@@ -1,11 +1,19 @@
 from tkinter import *
 from  functions  import *
 import tkinter.font as font
+from PIL import ImageTk, Image
+
+
 
 
 root = Tk()
 frm = ttk.Frame(root, padding=10)
 frm.grid()
+
+bg = ImageTk.PhotoImage(file='Assests/water.jpg')
+my_label = Label(frm,image=bg)
+my_label.place(x=0,y=0,relheight=1,relwidth=1 )
+
 def check_Tick(): # The Funciton is for changing the colour of the boxes
     l = attendence()
     for i in l:
