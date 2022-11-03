@@ -35,15 +35,12 @@ class Login:
             messagebox.showerror("Invalid username or password",parent=self.root)
         else:
             messagebox.showinfo("Welcome","welcome {self.txt.user.get()}\nyour Password: {self.txt.pass.get()}",parent=self.root)
-        
-
-
-
-
-
 
 root=Tk()
-obj=Login(root)
+#Before
+# obj=Login(root)
+#The change i have made
+obj=Login()
 root.mainloop()
 
 
