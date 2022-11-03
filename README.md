@@ -13,8 +13,9 @@ In a month an Individual can attend 20 Sessions. They have to pay the fee after 
 The following dependencies must be installed as well
 
 ```bash
-# Installing Tkinter In Linux
-sudo apt-get install python3-tk
+# Commands for installing Dependencies
+sudo apt-get install python3-tk  
+sudo dnf install python3-tkinter
 pip install pyzbar
 pip install opencv-python
 pip install zbarlight
