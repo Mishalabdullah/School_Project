@@ -16,6 +16,14 @@ class Login:
         title=Label(Frame_login,text="Login Here",font=("helventica",35,"bold")fg="#d77337").place(x=90,y=30)
 
         lbl_user=Label(Frame_login,texts="Username",fg='#d77337').place(x=90,y=100)
+        self.txt_user=Entry(Frame_login,font=("times new roman",15))
+        self.txt_user.place=(x=90,y=170,width=350,height=35)
+        lbl_pass=Label(Frame_login,texts="Password",fg='#d77337').place(x=90,y=130)
+        self.txt_pass=Entry(Frame_login,font=("times new roman",15))
+        self.txt_pass.place=(x=90,y=210,width=350,height=35)
+
+        forget=button(Frame_login,text="Forget password?",bg="white",fg="#d77337",font=("times new roman",12)).place(x=90,y=)
+
 
 
 
