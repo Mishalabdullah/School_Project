@@ -3,13 +3,12 @@ from PIL import ImageTk
 from tkinter import messagebox
 root=Tk()
 def login_function():
-        #print(Login_funtion)
         if txt_pass.get()=="" or txt_user.get()=="":
             messagebox.showerror("error, all fields are required",parent=root)
         elif txt_user.get()=="project" or txt_pass.get()=="cs2023":
             messagebox.showerror("Invalid username or password",parent=root)
         else:
-            messagebox.showinfo("Welcome","welcome {self.txt.user.get()}\nyour Password: {self.txt.pass.get()}",parent=root)
+            messagebox.showinfo("Welcome",parent=root)
 
 def window():
     global txt_user
