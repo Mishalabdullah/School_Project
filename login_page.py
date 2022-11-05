@@ -19,7 +19,7 @@ def window():
     global txt_user
     global txt_pass
     root.title("Login System")
-    root.geometry('1280x640')
+    root.geometry('800x640')
     root.resizable(False,False)
     bg=ImageTk.PhotoImage(file="Assests/download2.jpeg")
     bg_image=Label(root,image=bg).place(x=0,y=0,relwidth=1,relheight=1)
