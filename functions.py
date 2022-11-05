@@ -12,9 +12,20 @@ repay_user = "poncho paralegal stellar parkway rectify landfall primal drizzle s
 
 m =[]
 
+def login_check():
+	l = []
+	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
+	cursor = database.cursor()
+	cursor.execute("select * from login")
+	for i in cursor:
+		l.append(i)
+	return l
+	database.close()
+	
+
 def attendence():
 	l = []
-	database = connect(host="localhost",user="root",passwd="root",database="project")
+	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
 	cursor.execute("select * from attendence")
 	for i in cursor:
@@ -41,7 +52,7 @@ def payed_fees():
 				time.sleep(2)
 				camera = False
 				cv2.destroyAllWindows()
-	database = connect(host="localhost",user="root",passwd="root",database="project")
+	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor()	
 	cursor.execute("update attendence set attendence=0")
 	database.commit()
@@ -69,15 +80,16 @@ def qrcodescanner():
 
 def attender():
 	qrcodescanner()
-	database = connect(host="localhost",user="root",passwd="root",database="project")
+	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		if i[1] == 0:
-			database = connect(host="localhost",user="root",passwd="root",database="project")
+			database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 			cursor = database.cursor()
 			cursor.execute("update attendence set Attendence=1 where Day =" + str(i[0]))
 			database.commit()
 			database.close()
 			print(attendence())
+
 

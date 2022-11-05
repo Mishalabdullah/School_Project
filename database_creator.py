@@ -1,6 +1,6 @@
 from mysql.connector import *
 try:
-    database = connect(host="localhost",user="mishal",passwd="root",database="projet")
+    database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="projet")
     cursor = database.cursor()
 except:
     database_user = input("Enter Your Username For The Database:")
