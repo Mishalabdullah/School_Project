@@ -184,8 +184,8 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
  
 
 check_Tick()
-ttk.Label(frm, text="LIFE",font=("Helvetica", 24)).grid(column=2, row=0)
-ttk.Label(frm, text="Scan The QRCode To Enter",font=("Helvetica", 20)).grid(column=2, row=1)
+Label(frm, text="LIFE",font=("Helvetica", 24),bg='#0688d4',fg="#ffffff").grid(column=2, row=0,pady=10)
+Label(frm, text="Scan The QRCode To Enter",font=("Helvetica", 20),bg='#0688d4',fg="#ffffff").grid(column=2, row=1)
 ScanMeButton = Button(frm,text="Click To Scan",bg='#0688d4',fg="#ffffff",font=('Helvetica',18),command=attender,border=0)
 ScanMeButton.grid(column=2, row=2, pady=15)
 ttk.Button(frm, text="reset", command=payed_fees).grid(column=3, row=10, pady=15)
