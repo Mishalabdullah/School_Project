@@ -184,13 +184,13 @@ def check_Tick(): # The Funciton is for changing the colour of the boxes
  
 
 check_Tick()
-Label(frm, text="LIFE",font=("Helvetica", 24),bg='#0688d4',fg="#ffffff").grid(column=2, row=0,pady=10)
-Label(frm, text="Scan The QRCode To Enter",font=("Helvetica", 20),bg='#0688d4',fg="#ffffff").grid(column=2, row=1)
-ScanMeButton = Button(frm,text="Click To Scan",bg='#0688d4',fg="#ffffff",font=('Helvetica',18),command=attender,border=0)
+Label(frm, text="LIFE",font=("Helvetica", 24),bg='#d9ecf0',fg="#000000").grid(column=2, row=0,pady=10)
+Label(frm, text="Scan The QRCode To Enter",font=("Helvetica", 20),bg='#d9ecf0',fg="#000000").grid(column=2, row=1)
+ScanMeButton = Button(frm,text="Click To Scan",fg='#0688d4',bg="#ffffff",font=('Helvetica',18),command=attender,border=0)
 ScanMeButton.grid(column=2, row=2, pady=15)
-ttk.Button(frm, text="reset", command=payed_fees).grid(column=3, row=10, pady=15)
-ttk.Button(frm, text="Quit", command=root.destroy).grid(column=2, row=10,padx=55)
-ttk.Button(frm, text="check", command=check_Tick).grid(column=1, row=10)
+Button(frm, text="reset", command=payed_fees,font=("times new roman",15),fg='#0688d4',bg="#ffffff").grid(column=3, row=10, pady=15)
+Button(frm, text="Quit", command=root.destroy,font=("times new roman",15),fg='#0688d4',bg="#ffffff").grid(column=2, row=10,padx=55)
+Button(frm, text="check", command=check_Tick,font=("times new roman",15),fg='#0688d4',bg="#ffffff").grid(column=1, row=10)
 
 
 root.mainloop()
