@@ -34,7 +34,7 @@ def attendence():
 	database.close()
 	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
-	cursor.execute("insert into time values("+str(month)+")")
+	cursor.execute("insert into number_of_visites values("+str(month)+")")
 	database.commit()
 	for i in cursor:
 		l.append(i)
