@@ -36,5 +36,3 @@ def window():
     root.mainloop()
 
 window()
-
-

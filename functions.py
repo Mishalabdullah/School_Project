@@ -1,7 +1,7 @@
 import cv2
 from pyzbar.pyzbar import decode
 from mysql.connector import *
-import time
+from datetime import date
 from tkinter import *
 from tkinter import ttk
 
@@ -25,14 +25,21 @@ def login_check():
 
 def attendence():
 	l = []
+	day = date.today()
+	b = str(day)
+	month= b[5]+b[6]
 	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
 	cursor.execute("select * from attendence")
+	database.close()
+	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
+	cursor = database.cursor() 
+	cursor.execute("insert into time values("+str(month)+")")
+	database.commit()
 	for i in cursor:
 		l.append(i)
 	return l 
 
-	database.close()
 
 	
 def payed_fees():
@@ -91,5 +98,5 @@ def attender():
 			database.commit()
 			database.close()
 			print(attendence())
-
+attendence()
 
