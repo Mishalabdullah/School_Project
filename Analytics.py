@@ -6,7 +6,17 @@ root = Tk()
 
 frm = ttk.Frame(root, padding=20)
 frm.grid()
-
+l = []
+def data_extract():
+    database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
+    cursor = database.cursor()
+    cursor.execute("select count( month) from number_of_visites group by month")
+    myrec = cursor.fetchall()
+    for i in myrec:
+        l.append(i)
+    print(l)
+data_extract()
+# select count( month) from number_of_visites group by month; important
 bg = ImageTk.PhotoImage(file='Assests/water.jpeg')
 my_label = Label(frm,image=bg)
 my_label.place(x=0,y=0,relheight=1,relwidth=1 ,bordermode=OUTSIDE)
