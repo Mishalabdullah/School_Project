@@ -66,12 +66,13 @@ def attendence():
 	cursor.execute("select * from attendence")
 	for i in cursor:
 		l.append(i)
-	return l 
 	database.close()
 	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
 	cursor.execute("insert into number_of_visites values("+str(month)+")")
 	database.commit()
+	database.close()
+	return l 
 
 
 
@@ -132,4 +133,3 @@ def attender():
 			database.commit()
 			database.close()
 			print(attendence())
-
