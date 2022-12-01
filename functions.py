@@ -25,9 +25,8 @@ def login_check():
 
 def attendence():
 	l = []
-	day = date.today()
-	b = str(day)
-	month= b[5]+b[6]
+	todays_date = date.today()
+	month= todays_date.month
 	database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
 	cursor = database.cursor() 
 	cursor.execute("select * from attendence")
