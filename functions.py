@@ -1,4 +1,5 @@
 import cv2
+import time
 from pyzbar.pyzbar import decode
 from mysql.connector import *
 from datetime import date
@@ -41,6 +42,7 @@ def the_graph():
 	least_month=min(t.month_data)
 	max_month=max(t.month_data)
 	plt.xticks(np.arange(least_month, max_month+1, 1))
+	plt.yticks(np.arange(1,31, 2))
 	plt.show()
 
 
