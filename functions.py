@@ -4,6 +4,8 @@ from mysql.connector import *
 from datetime import date
 from tkinter import *
 from tkinter import ttk
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 global valid_user
@@ -11,6 +13,36 @@ valid_user = "persuader storage repressed dawdler unearned eardrum groom polyest
 repay_user = "poncho paralegal stellar parkway rectify landfall primal drizzle slate timothy circular trident"
 
 m =[]
+class database_data_extractor:
+    def __init__(self):
+        database = connect(host="localhost",user="root",passwd="+7hTnU+Ajaly",database="project")
+        cursor = database.cursor()
+        cursor.execute("select count( month) from number_of_visites group by month")
+        data= cursor.fetchall()
+        self.required_data = [i[j] for i in data for j in range(len(i))]
+        cursor.execute("select distinct month from number_of_visites")
+        data= cursor.fetchall()
+        self.month_data= [i[j] for i in data for j in range(len(i))]
+        database.close()
+    
+def class_return():
+    return database_data_extractor()
+
+
+def the_graph():
+	t = class_return()
+	print(t.required_data)
+	print(t.month_data)
+	fig = plt.figure(figsize = (10, 5))
+	plt.bar(t.month_data,t.required_data, color ='blue',width = 0.4)
+	plt.xlabel("Month")
+	plt.ylabel("Number Of Visits")
+	plt.title("Number Of Times Attended")
+	least_month=min(t.month_data)
+	max_month=max(t.month_data)
+	plt.xticks(np.arange(least_month, max_month+1, 1))
+	plt.show()
+
 
 def login_check():
 	l = []
